@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-app-region: drag;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.canvas-wrapper {
+    position: relative;
+}
+.canvas-wrapper canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

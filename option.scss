@@ -1,0 +1,89 @@
+$bgcolor: #222222;
+$fontcolor: #fff;
+
+body {
+    background: $bgcolor;
+    text-align: center;
+    color: $fontcolor;
+
+    -webkit-app-region: drag;
+    user-select: none;
+}
+
+$inputboxsize:300px;
+$inputboxrad:10px;
+
+div {
+    text-align: start;
+    width: $inputboxsize + $inputboxrad * 2;
+    margin: 0 auto;
+}
+
+h1 {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+
+    background: linear-gradient(to right,red,orange,yellow,green,aqua,blue,purple,red) 0% center / 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: example 3s linear infinite;
+
+    @keyframes example {
+        to {
+            background-position-x: 200%;
+        }
+    }
+}
+
+input,
+a {
+    -webkit-app-region: no-drag;
+}
+
+$boder_col:#3498db;
+
+input[type="text"] {
+    width: $inputboxsize;
+    border: none;
+    border-radius: $inputboxrad;
+    box-shadow: none;
+    padding: 2px 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $bgcolor;
+
+    &:hover {
+        box-shadow: 0 0 7px $boder_col;
+        border-color: $boder_col;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.butt {
+    &>i {
+        font-size: 3em;
+    }
+
+    display: inline-block;
+    padding: .5em .5em;
+    background: #ff0000;
+    color: $fontcolor;
+    border-bottom: solid 4px #500000;
+    border-radius: 50%;
+
+    &:active {
+        transform: translateY(4px);
+        border-color: $bgcolor;
+    }
+}
+
+span {
+    margin-right: 10px;
+}
